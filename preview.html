@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BAF Shaheen College Dhaka | AMS Preview</title>
+<style>
+:root{--bg:#f5f3ec;--surface:#fff;--ink:#16233f;--soft:#52607a;--faint:#8791a3;--accent:#a9791f;--accent-ink:#6b4d12;--rule:#ddd6c4;--rule2:#c7bfa8;--r:8px}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,"Segoe UI",Roboto,"Noto Sans Bengali",sans-serif;font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:Georgia,"Noto Serif Bengali",serif;margin:0;letter-spacing:-.01em}
+a{color:inherit}
+.hdr{background:var(--surface);border-bottom:1px solid var(--rule)}
+.hdr-in{max-width:1100px;margin:0 auto;padding:12px 16px;display:flex;flex-direction:column;gap:10px}
+.brand{display:flex;align-items:center;gap:10px}
+.crest{width:34px;height:34px;border-radius:50%;border:1.5px solid var(--accent);display:flex;align-items:center;justify-content:center;font-family:Georgia,serif;font-weight:700;font-size:13px;color:var(--accent-ink);flex-shrink:0}
+.bn{font-family:Georgia,serif;font-size:16px;font-weight:600;line-height:1.2}
+.bs{font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--faint)}
+.nav{display:flex;gap:16px;font-size:13.5px;flex-wrap:wrap;align-items:center}
+.nav a{color:var(--soft);text-decoration:none;padding-bottom:3px;border-bottom:2px solid transparent;cursor:pointer}
+.nav a.on{color:var(--ink);border-bottom-color:var(--accent);font-weight:600}
+.wrap{max-width:1100px;margin:0 auto;padding:22px 16px 60px}
+.narrow{max-width:640px}
+.eyebrow{font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);display:block;margin-bottom:6px}
+.title{font-size:26px;margin-bottom:4px}
+.sub{color:var(--soft);margin:0 0 20px;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--rule);border-radius:var(--r);box-shadow:0 1px 2px rgba(22,35,63,.06),0 8px 24px -12px rgba(22,35,63,.18)}
+.pad{padding:18px}
+.grid2{display:grid;grid-template-columns:1fr;gap:14px}
+@media(min-width:640px){.grid2{grid-template-columns:1fr 1fr}.hdr-in{flex-direction:row;justify-content:space-between;align-items:center}}
+.field{display:flex;flex-direction:column;gap:5px}
+.field.full{grid-column:1/-1}
+.field label{font-size:11.5px;font-weight:600;color:var(--soft);text-transform:uppercase;letter-spacing:.04em}
+input,select,textarea{font:inherit;font-size:15px;padding:10px 12px;border:1px solid var(--rule2);border-radius:4px;background:#fffdf9;color:var(--ink);width:100%}
+textarea{min-height:70px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--accent);outline-offset:1px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.tab{border:1px solid var(--rule2);background:var(--surface);padding:8px 14px;border-radius:999px;font-size:13px;cursor:pointer;color:var(--soft)}
+.tab.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;font:inherit;font-size:14px;font-weight:600;padding:10px 18px;border-radius:4px;border:1px solid transparent;cursor:pointer;text-decoration:none}
+.btn:disabled{opacity:.5}
+.bp{background:var(--ink);color:#fff}.ba{background:var(--accent);color:#fff}
+.bg{background:transparent;border-color:var(--rule2);color:var(--ink)}
+.sm{padding:6px 11px;font-size:12.5px}
+.seal{display:inline-flex;align-items:center;gap:6px;font-family:ui-monospace,Menlo,monospace;font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:4px 10px;border-radius:999px;border:1.4px solid;white-space:nowrap}
+.seal i{width:6px;height:6px;border-radius:50%;background:currentColor}
+.alert{padding:10px 14px;border-radius:4px;font-size:13.5px;border:1px solid;margin-bottom:12px}
+.err{background:#fef2f2;border-color:#fecaca;color:#991b1b}.ok{background:#f0fdf4;border-color:#bbf7d0;color:#166534}
+.muted{color:var(--soft)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:18px}
+@media(min-width:760px){.stats{grid-template-columns:repeat(5,1fr)}}
+.stat{border:1px solid var(--rule);background:var(--surface);border-radius:var(--r);padding:10px 12px}
+.stat b{font-family:Georgia,serif;font-size:22px;display:block}
+.stat span{font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--faint)}
+.tool{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px}
+@media(min-width:760px){.tool{grid-template-columns:repeat(6,1fr)}}
+.tool .full{grid-column:1/-1}
+.tool select,.tool input{padding:8px 10px;font-size:13.5px}
+.tw{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13px;min-width:760px}
+th{text-align:left;font-family:ui-monospace,Menlo,monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);padding:10px 12px;border-bottom:1.5px solid var(--rule2);white-space:nowrap}
+td{padding:10px 12px;border-bottom:1px solid var(--rule);vertical-align:middle}
+tbody tr{cursor:pointer}
+tbody tr:nth-child(even){background:#faf8f2}
+tbody tr:hover{background:#f3efe2}
+.mono{font-family:ui-monospace,Menlo,monospace;font-size:12px;color:var(--soft)}
+.pager{display:flex;justify-content:center;align-items:center;gap:12px;margin-top:16px;font-size:13px}
+.bd{position:fixed;inset:0;background:rgba(22,35,63,.5);display:flex;align-items:flex-end;justify-content:center;z-index:50}
+@media(min-width:640px){.bd{align-items:center;padding:20px}}
+.modal{background:var(--surface);width:100%;max-width:720px;max-height:92vh;overflow-y:auto;padding:20px;border-radius:14px 14px 0 0}
+@media(min-width:640px){.modal{border-radius:var(--r)}}
+.dg{display:grid;grid-template-columns:1fr 1fr;gap:8px 14px;font-size:13.5px;margin:14px 0}
+.dg div{overflow-wrap:anywhere}
+hr{border:none;border-top:1px solid var(--rule);margin:16px 0}
+.tl{margin-left:6px;padding-left:22px;border-left:2px solid var(--rule2)}
+.ti{position:relative;padding-bottom:16px}
+.ti:before{content:"";position:absolute;left:-29px;top:4px;width:11px;height:11px;border-radius:50%;background:var(--accent);border:2px solid #fff;box-shadow:0 0 0 2px var(--accent)}
+.tm{font-family:ui-monospace,Menlo,monospace;font-size:11.5px;color:var(--faint);margin-top:2px}
+.seat{border:1.5px solid var(--rule2);border-radius:var(--r);padding:12px 16px;margin:14px 0;background:#fbf9f3;text-align:center}
+.seat .h{font-family:ui-monospace,Menlo,monospace;font-size:11px;color:var(--faint);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}
+.seat .row{display:flex;justify-content:center;gap:30px;flex-wrap:wrap}
+.seat small{display:block;font-size:10px;text-transform:uppercase;color:var(--faint)}
+.doc{display:flex;justify-content:space-between;align-items:center;gap:8px;border:1px solid var(--rule);border-radius:4px;padding:8px 10px;margin-bottom:8px;font-size:13px}
+#toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:10px 16px;border-radius:6px;font-size:13px;z-index:99;display:none;max-width:90vw;text-align:center}
+.seatgrid input{width:58px;padding:5px 6px;font-size:13px}
+.demo{background:#fff8e6;border-bottom:1px solid #ecd9a6;font-size:12px;text-align:center;padding:6px 10px;color:#6b4d12}
+.stat.click{cursor:pointer;text-align:left;font:inherit;width:100%}
+.stat.click:hover{box-shadow:0 2px 8px rgba(0,0,0,.12)}
+.stat.click.on{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent) inset}
+.stats.three{grid-template-columns:repeat(3,1fr)}
+.vc{display:inline-block;padding:1px 8px;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.04em}
+.vc.BV{background:#e0ecff;color:#1e40af}.vc.EV{background:#fdecc8;color:#92400e}
+.seatgrid table{border-collapse:separate;border-spacing:0;min-width:760px}
+.seatgrid th,.seatgrid td{text-align:center;white-space:nowrap}
+.seatgrid .sc{position:sticky;left:0;z-index:2;background:#fff;box-shadow:2px 0 0 var(--rule2);min-width:52px;font-size:14px}
+.seatgrid thead .sc{z-index:3}
+.seatgrid input{text-align:center}
+.pill{display:inline-block;min-width:44px;padding:3px 10px;border-radius:6px;border:1px solid rgba(0,0,0,.12);font-size:15px}
+.rolebtn{display:block;width:100%;margin-bottom:8px;text-align:left}
+</style>
+</head>
+<body>
+<div class="demo">Preview only &mdash; sample data, nothing is saved. The real app runs on Next.js + MongoDB.</div>
+<div id="app"></div>
+<div id="modal"></div>
+<div id="toast"></div>
+<script>
+/* ---------- constants ---------- */
+var VERSIONS=["Bangla","English"],SHIFTS=["Morning","Day"],CLASSES=["KG","I","II","III","IV","V","VI","VII","VIII","IX","X","XI","XII"],CATS=["Civil","BAF","SD","SEMC","Navy","Army"],GROUPS=["Science","B. Studies","Humanities"],GROUP_CLASSES=["IX","X","XI","XII"];
+var VAB={Bangla:"BV",English:"EV"},SAB={Morning:"Mor",Day:"Day"};
+var TYPES={admission:"Admission",shift_change:"Shift Change",version_change:"Version Change",miscellaneous:"Miscellaneous"};
+var SESSION="27";
+var TFIELDS={
+ admission:["version","shift","class","group","name","guardianName","category","remarks","reference"],
+ shift_change:["version","shift","class","studentId","reqShift","name","guardianName","category","remarks","reference"],
+ version_change:["version","shift","class","studentId","reqVersion","reqShift","name","guardianName","category","remarks","reference"],
+ miscellaneous:["subject","class","requirement","remarks","category","reference"]};
+var FM={version:{l:"Version",o:VERSIONS},shift:{l:"Shift",o:SHIFTS},"class":{l:"Class",o:CLASSES},studentId:{l:"Student ID"},reqShift:{l:"Requested Shift",o:SHIFTS},reqVersion:{l:"Requested Version",o:VERSIONS},subject:{l:"Subject"},requirement:{l:"Requirement",area:1},name:{l:"Applicant Name"},guardianName:{l:"Guardian Name"},category:{l:"Category",o:CATS},remarks:{l:"Remarks",area:1},reference:{l:"Reference"},group:{l:"Group",o:GROUPS}};
+var ST=[["applied","Applied","#fff","#374151","#d1d5db"],["seen","Seen","#dbeafe","#1e40af","#93c5fd"],["short_listed","Short Listed","#dcfce7","#166534","#86efac"],["called_for_exam","Called For Exam","#ede9fe","#5b21b6","#c4b5fd"],["attended_exam","Attended Exam","#cffafe","#155e75","#67e8f9"],["absent_on_exam","Absent on Exam","#ffedd5","#9a3412","#fdba74"],["selected_for_reexam","Selected For Re-Exam","#fef9c3","#854d0e","#fde047"],["approved","Approved","#16a34a","#fff","#15803d"],["declined","Declined","#fee2e2","#991b1b","#fca5a5"]];
+var STM={};ST.forEach(function(s){STM[s[0]]=s})
+var PUBLIC=["applied","approved","declined"];
+var ROLES={super_admin:"Super Admin",admin_principal:"Admin (Principal)",admin_office:"Admin (Office)",entry:"Entry",admin_officer:"Admin Officer"};
+var DOCTYPES=["Result","Marksheet","Application","TC","BAF Job Testimonial","Student's Birth Certificate","Others"];
+function canStatus(r){return r==="super_admin"||r==="admin_principal"||r==="admin_office"}
+function canSeats(r){return canStatus(r)}
+
+/* ---------- sample data ---------- */
+var names=["Rafiq Ahmed","Nusrat Jahan","Tanvir Hasan","Sadia Islam","Imran Khan","Farhana Akter","Mahin Chowdhury","Tasnim Rahman","Arif Hossain","Samira Haque","Zayan Karim","Lamia Sultana","Rakib Hasan","Anika Tabassum","Nabil Sarker","Ishrat Zaman"];
+var APPS=[],SEQ=0,SLN=0;
+function addApp(o){SEQ++;o.id=SEQ;
+ if(!o.appSl){var c;do{SLN++;c=SESSION+String(SLN).padStart(4,"0")}while(APPS.some(function(a){return a.appSl===c}));o.appSl=c}
+ o.statusHistory=o.statusHistory||[{status:"applied",at:new Date(),by:"",note:"Application submitted"}];
+ o.documents=o.documents||[];if(o.examMarks===undefined)o.examMarks=null;o.createdAt=o.createdAt||new Date();APPS.push(o);return o}
+(function(){var tk=["admission","admission","shift_change","admission","version_change","admission","miscellaneous"];
+ for(var i=0;i<28;i++){var t=tk[i%7],st=["applied","short_listed","approved","seen","applied","called_for_exam","approved","declined","short_listed","attended_exam","applied"][i%11];
+  var o={type:t,name:names[i%16],guardianName:"Guardian of "+names[i%16].split(" ")[0],"class":CLASSES[(i*5+i%3)%13],version:VERSIONS[(i*3+(i>>2))%2],shift:SHIFTS[(i>>1)%2],category:CATS[i%6],reference:i%3?"":"Col. A. Rahman",remarks:i%4===1?"Recommended by principal":"",phone:"0171100"+String(1000+i),status:st,enteredBy:i%3===0?"Entry User":(i%3===1?"Office Staff":""),createdAt:new Date(Date.now()-i*86400000*2)};
+  if(GROUP_CLASSES.indexOf(o["class"])>-1&&t==="admission")o.group=GROUPS[i%3];
+  if(t==="shift_change"){o.studentId="S"+(2000+i);o.reqShift=o.shift==="Morning"?"Day":"Morning"}
+  if(t==="version_change"){o.studentId="S"+(2000+i);o.reqVersion=o.version==="Bangla"?"English":"Bangla";o.reqShift="Day"}
+  if(t==="miscellaneous"){o.subject="Certificate correction";o.requirement="Name spelling fix on testimonial";delete o.version;delete o.shift}
+  if(["attended_exam","selected_for_reexam","approved"].indexOf(st)>-1)o.examMarks=50+((i*7)%48);
+  if(st!=="applied")o.statusHistory=[{status:"applied",at:o.createdAt,by:"",note:"Application submitted"},{status:st,at:new Date(),by:"Office Staff",note:""}];
+  addApp(o)}})();
+var SEATS={};
+CLASSES.forEach(function(c,i){VERSIONS.forEach(function(v,j){SHIFTS.forEach(function(s,k){SEATS[v+"|"+s+"|"+c]={status:(((i*3+j*5+k*2)%9)-4)*5,sec:2+((i+j+k)%4)}})})});
+
+/* ---------- state ---------- */
+var S={view:"apply",role:null,user:"",F:{type:"admission",status:"",version:"",shift:"",cls:"",q:"",marks:false,page:1},PAGE:8,Q:[],applyType:"admission",done:null,track:null,trackErr:""};
+function $(id){return document.getElementById(id)}
+function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+function toast(m){var t=$("toast");t.textContent=m;t.style.display="block";clearTimeout(toast.h);toast.h=setTimeout(function(){t.style.display="none"},2200)}
+function seal(s){var c=STM[s]||STM.applied;return '<span class="seal" style="background:'+c[2]+';color:'+c[3]+';border-color:'+c[4]+'"><i></i>'+c[1]+'</span>'}
+function fmtD(d){return new Date(d).toLocaleDateString()}
+function fmtDT(d){return new Date(d).toLocaleString()}
+
+/* ---------- shell ---------- */
+function go(v){S.view=v;S.done=null;render()}
+function render(){
+ var admin=S.role&&["admin","entry2","seats"].indexOf(S.view)>-1;
+ var nav;
+ if(S.role&&(S.view==="admin"||S.view==="entry2"||S.view==="seats")){
+  nav='<a class="'+(S.view==="admin"?"on":"")+'" onclick="go(\'admin\')">Applications</a><a class="'+(S.view==="entry2"?"on":"")+'" onclick="go(\'entry2\')">New Entry</a>'+(canSeats(S.role)?'<a class="'+(S.view==="seats"?"on":"")+'" onclick="go(\'seats\')">Seats</a>':'')+'<a onclick="go(\'apply\')">Public site</a><span class="muted" style="font-size:12px">'+ROLES[S.role]+'</span><a onclick="logout()">Sign out</a>';
+ }else{
+  nav='<a class="'+(S.view==="apply"?"on":"")+'" onclick="go(\'apply\')">Apply</a><a class="'+(S.view==="track"?"on":"")+'" onclick="go(\'track\')">Track Status</a><a class="'+(S.view==="login"?"on":"")+'" onclick="'+(S.role?"go('admin')":"go('login')")+'">'+(S.role?"Dashboard":"Staff Login")+'</a>';
+ }
+ var h='<header class="hdr"><div class="hdr-in"><div class="brand"><span class="crest">SD</span><div><div class="bn">BAF Shaheen College Dhaka</div><div class="bs">Application Management System</div></div></div><nav class="nav">'+nav+'</nav></div></header><main class="wrap'+((S.view==="admin"||S.view==="seats")?"":" narrow")+'">';
+ if(S.view==="apply")h+=viewForm(false);
+ else if(S.view==="entry2")h+=viewForm(true);
+ else if(S.view==="track")h+=viewTrack();
+ else if(S.view==="login")h+=viewLogin();
+ else if(S.view==="admin")h+=viewAdmin();
+ else if(S.view==="seats")h+=viewSeats();
+ h+='</main>';$("app").innerHTML=h;
+ if(S.view==="admin")renderList();
+ window.scrollTo(0,0);
+}
+function logout(){S.role=null;S.user="";go("apply")}
+
+/* ---------- apply form ---------- */
+function fieldHTML(k){var m=FM[k],id="f_"+k,h='<div class="field'+(m.area?" full":"")+'"><label for="'+id+'">'+m.l+'</label>';
+ if(m.area)h+='<textarea id="'+id+'"></textarea>';
+ else if(m.o){h+='<select id="'+id+'"'+(k==="class"?' onchange="syncGroup()"':'')+'><option value="">Select '+m.l.toLowerCase()+'</option>'+m.o.map(function(o){return'<option>'+esc(o)+'</option>'}).join("")+'</select>'}
+ else h+='<input id="'+id+'"'+(k==="name"?" required":"")+'>';
+ return h+'</div>'}
+function viewForm(staff){
+ if(S.done){var d=S.done;return '<div class="card pad"><span class="eyebrow">Submitted</span><h2 style="font-size:21px;margin-bottom:10px">Application received</h2><p class="muted">Keep your Serial Number safe &mdash; it is also your tracking number.</p><div style="border:1px dashed var(--rule2);border-radius:8px;padding:14px;margin:14px 0"><div class="muted" style="font-size:11px;text-transform:uppercase">Serial No (also your tracking number)</div><div style="font-family:ui-monospace,Menlo,monospace;font-size:26px;font-weight:600">'+d.appSl+'</div></div><button class="btn ba" onclick="go(\''+(staff?"entry2":"apply")+'\')">Submit another</button></div>'}
+ var h='<span class="eyebrow">'+(staff?"New Entry":"New Application")+'</span><h1 class="title">Submit an application</h1><p class="sub">'+(staff?"Recorded under your account. You may set a Manual App Sl, or leave blank to auto-generate.":"Choose the type, fill in the details, and you will get a Serial Number (also your tracking number).")+'</p><div class="tabs">';
+ Object.keys(TYPES).forEach(function(t){h+='<button class="tab'+(t===S.applyType?" on":"")+'" onclick="S.applyType=\''+t+'\';render()">'+TYPES[t]+'</button>'});
+ h+='</div><form class="card pad" onsubmit="return submitApp(event,'+(staff?1:0)+')"><div id="ferr"></div><div class="grid2">';
+ TFIELDS[S.applyType].forEach(function(k){if(k!=="group")h+=fieldHTML(k)});
+ if(S.applyType==="admission")h+='<div id="groupWrap"></div>';
+ h+='<div class="field"><label for="f_phone">Mobile Number</label><input id="f_phone" type="tel" placeholder="01XXXXXXXXX"></div>';
+ if(staff)h+='<div class="field"><label for="f_appSl">Manual App Sl (optional)</label><input id="f_appSl" placeholder="Leave blank to auto-generate" style="font-family:ui-monospace,monospace"></div>';
+ if(staff)h+='<div style="grid-column:1/-1;margin-top:6px;padding-top:16px;border-top:1px solid var(--rule)"><h3 style="font-size:15px;margin-bottom:4px">Documents (optional)</h3><p class="muted" style="font-size:12.5px;margin:0 0 10px">Any image or PDF, any size &mdash; shrunk to under 200 KB automatically (big PDFs become images).</p><div id="qlist">'+qHTML()+'</div><div class="grid2"><div class="field"><label>Document Type</label><select id="q_dt">'+DOCTYPES.map(function(t){return'<option>'+esc(t)+'</option>'}).join("")+'</select></div><div class="field"><label>Add File</label><input id="q_f" type="file" accept="application/pdf,image/*" onchange="queueFile(this)"></div></div><div id="qbusy" class="muted" style="font-size:12.5px;margin-top:6px"></div></div>';
+ return h+'</div><div style="margin-top:18px"><button class="btn bp" type="submit" style="width:100%">Submit Application</button></div></form>'}
+function syncGroup(){var w=$("groupWrap");if(!w)return;var c=$("f_class").value;
+ w.innerHTML=GROUP_CLASSES.indexOf(c)>-1?fieldHTML("group"):""}
+function submitApp(e,staff){e.preventDefault();var o={type:S.applyType,status:"applied"};
+ TFIELDS[o.type].forEach(function(k){var el=$("f_"+k);if(el&&el.value.trim())o[k]=el.value.trim()});
+ o.phone=$("f_phone").value.trim();
+ if(o.type!=="miscellaneous"&&!o.name){$("ferr").innerHTML='<div class="alert err">Name is required</div>';return false}
+ if(staff){o.enteredBy=S.user;var m=$("f_appSl").value.trim();
+  if(m){if(APPS.some(function(a){return a.appSl.toLowerCase()===m.toLowerCase()})){$("ferr").innerHTML='<div class="alert err">App Sl "'+esc(m)+'" is already in use</div>';return false}o.appSl=m}}
+ if(staff){o.documents=S.Q.map(function(q){return{type:q.type,name:q.name,size:q.size}});S.Q=[]}
+ S.done=addApp(o);render();return false}
+
+/* ---------- documents: any image/PDF -> under 200 KB ---------- */
+var MAXB=200*1024,TARGET=190*1024;
+function blobSz(c,q){return new Promise(function(r){c.toBlob(r,"image/jpeg",q)})}
+function shrink(src,w,h){var sc=Math.min(1,1800/Math.max(w,h)),qs=[.85,.75,.65,.55,.45,.35,.28];
+ function round(n){if(n>=8||Math.min(w,h)*sc<300)return Promise.reject(new Error("Could not shrink this file under 200 KB"));
+  var W=Math.max(1,Math.round(w*sc)),H=Math.max(1,Math.round(h*sc)),c=document.createElement("canvas");c.width=W;c.height=H;var x=c.getContext("2d");x.fillStyle="#fff";x.fillRect(0,0,W,H);x.drawImage(src,0,0,W,H);
+  var i=0;function tryQ(){if(i>=qs.length){sc*=.8;return round(n+1)}return blobSz(c,qs[i++]).then(function(b){return b&&b.size<=TARGET?b:tryQ()})}
+  return tryQ()}
+ return round(0)}
+function loadPdfJs(){return new Promise(function(res,rej){if(window.pdfjsLib)return res(window.pdfjsLib);var s=document.createElement("script");s.src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js";s.onload=function(){window.pdfjsLib.GlobalWorkerOptions.workerSrc="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";res(window.pdfjsLib)};s.onerror=function(){rej(new Error("PDF converter needs internet in this preview"))};document.head.appendChild(s)})}
+function prep(f){
+ if(f.type==="application/pdf"){
+  if(f.size<=MAXB)return Promise.resolve([{name:f.name,size:f.size,note:"kept as PDF"}]);
+  return loadPdfJs().then(function(L){return f.arrayBuffer().then(function(ab){return L.getDocument({data:new Uint8Array(ab)}).promise})}).then(function(pdf){
+   var n=Math.min(pdf.numPages,10),out=[],base=f.name.replace(/\.[^.]+$/,"");
+   function pg(k){if(k>n)return out;return pdf.getPage(k).then(function(p){var b=p.getViewport({scale:1}),sc=Math.min(3,Math.max(.5,1400/b.width)),v=p.getViewport({scale:sc}),c=document.createElement("canvas");c.width=Math.ceil(v.width);c.height=Math.ceil(v.height);var x=c.getContext("2d");x.fillStyle="#fff";x.fillRect(0,0,c.width,c.height);
+    return p.render({canvasContext:x,viewport:v}).promise.then(function(){return shrink(c,c.width,c.height)}).then(function(bl){out.push({name:n>1?base+"-p"+k+".jpg":base+".jpg",size:bl.size,note:"PDF converted to image"});return pg(k+1)})})}
+   return pg(1)})}
+ if(f.type.indexOf("image/")===0){
+  if(["image/jpeg","image/png","image/webp"].indexOf(f.type)>-1&&f.size<=MAXB)return Promise.resolve([{name:f.name,size:f.size,note:"kept as is"}]);
+  return new Promise(function(res,rej){var u=URL.createObjectURL(f),im=new Image();im.onload=function(){res(im)};im.onerror=function(){rej(new Error("This image format cannot be read"))};im.src=u}).then(function(im){return shrink(im,im.naturalWidth,im.naturalHeight)}).then(function(bl){return[{name:f.name.replace(/\.[^.]+$/,"")+".jpg",size:bl.size,note:"compressed from "+Math.round(f.size/1024)+" KB"}]})}
+ return Promise.reject(new Error("Only image or PDF files can be uploaded"))}
+function qHTML(){return S.Q.map(function(q,i){return'<div class="doc"><div><b>'+esc(q.type)+'</b><span class="muted"> &middot; '+esc(q.name)+' &middot; '+Math.max(1,Math.round(q.size/1024))+' KB &middot; '+esc(q.note)+'</span></div><button type="button" class="btn bg sm" onclick="S.Q.splice('+i+',1);$(\'qlist\').innerHTML=qHTML()">Remove</button></div>'}).join("")}
+function queueFile(inp){var f=inp.files[0];if(!f)return;var t=$("q_dt").value;$("qbusy").textContent="Converting file...";
+ prep(f).then(function(r){r.forEach(function(x){x.type=t;S.Q.push(x)});$("qlist").innerHTML=qHTML();$("qbusy").textContent=""}).catch(function(e){$("qbusy").textContent="";toast(e.message)});inp.value=""}
+
+/* ---------- track ---------- */
+function viewTrack(){
+ var h='<span class="eyebrow">Check Status</span><h1 class="title">Track your application</h1><p class="sub">Both the Serial Number and the mobile number used at submission are required.</p><form class="card pad" onsubmit="return doTrack(event)" style="margin-bottom:18px"><div class="field" style="margin-bottom:14px"><label>Serial Number</label><input id="t_id" placeholder="e.g. 270001" style="font-family:ui-monospace,monospace" required></div><div class="field"><label>Mobile Number</label><input id="t_ph" type="tel" placeholder="01XXXXXXXXX" required></div><p class="muted" style="font-size:12px;margin:10px 0 0">Try: 270003 &nbsp;/&nbsp; 01711001002</p><div style="margin-top:14px"><button class="btn bp" type="submit">Search</button></div></form>';
+ if(S.trackErr)h+='<div class="alert err">'+S.trackErr+'</div>';
+ var a=S.track;
+ if(a){var ps=PUBLIC.indexOf(a.status)>-1?a.status:"applied";
+  h+='<div class="card pad"><div style="display:flex;justify-content:space-between;gap:10px;align-items:flex-start"><div><div class="muted" style="font-size:12px">'+TYPES[a.type]+' &middot; Serial '+a.appSl+'</div><h2 style="font-size:19px">'+esc(a.name||a.subject)+'</h2></div>'+seal(ps)+'</div><div class="dg">';
+  ["version","shift","class","group","studentId","reqShift","reqVersion","subject","requirement","category"].forEach(function(k){if(a[k])h+='<div><span class="muted">'+FM[k].l+': </span><b>'+esc(a[k])+'</b></div>'});
+  h+='</div><hr><h3 style="font-size:15px;margin-bottom:12px">Status Timeline</h3><div class="tl">';
+  a.statusHistory.filter(function(x){return PUBLIC.indexOf(x.status)>-1}).slice().reverse().forEach(function(x){h+='<div class="ti">'+seal(x.status)+'<div class="tm">'+fmtDT(x.at)+'</div></div>'});
+  h+='</div><p class="muted" style="font-size:12px">Internal review stages are not shown publicly.</p></div>'}
+ return h}
+function doTrack(e){e.preventDefault();var id=$("t_id").value.trim().toLowerCase(),ph=$("t_ph").value.replace(/\D/g,"");
+ var a=APPS.filter(function(x){return x.appSl.toLowerCase()===id&&(x.phone||"").replace(/\D/g,"")===ph&&ph})[0];
+ S.track=a||null;S.trackErr=a?"":"No application found matching that Serial Number and mobile number";render();return false}
+
+/* ---------- login ---------- */
+function viewLogin(){var h='<span class="eyebrow">Staff Access</span><h1 class="title">Sign in</h1><p class="sub">Demo: pick a role to see what each one can do.</p><div class="card pad">';
+ Object.keys(ROLES).forEach(function(r){h+='<button class="btn bg rolebtn" onclick="login(\''+r+'\')"><b>'+ROLES[r]+'</b>&nbsp;<span class="muted" style="font-weight:400;font-size:12.5px">'+({super_admin:"everything incl. import/export",admin_principal:"status, marks, seats",admin_office:"status, marks, seats",entry:"enter applications, sees only own",admin_officer:"view all, no edits"})[r]+'</span></button>'});
+ return h+'</div>'}
+function login(r){S.role=r;S.user=r==="entry"?"Entry User":ROLES[r];S.F={type:"admission",status:"",version:"",shift:"",cls:"",q:"",marks:false,page:1};go("admin")}
+
+/* ---------- admin list ---------- */
+function sel(id,label,opts,val,fn){return '<select onchange="'+fn+'(this.value)"><option value="">'+label+'</option>'+opts.map(function(o){var v=o[0]!==undefined&&o.length>1?o[0]:o,l=o.length>1&&typeof o!=="string"?o[1]:o;return '<option value="'+esc(v)+'"'+(v===val?" selected":"")+'>'+esc(l)+'</option>'}).join("")+'</select>'}
+function viewAdmin(){var F=S.F;
+ var h='<span class="eyebrow">Registry</span><h1 class="title">Applications</h1><p class="sub" id="cnt"></p><div class="stats" id="stats"></div>';
+ h+='<form class="card pad" onsubmit="return findId(event)" style="display:flex;gap:8px;align-items:flex-end;margin-bottom:14px"><div class="field" style="flex:1"><label>Find &amp; update by Serial No</label><input id="fid" placeholder="e.g. 270001" style="font-family:ui-monospace,monospace"></div><button class="btn bp" type="submit">Open</button></form>';
+ h+='<div class="tool">'+sel("t","All Types",Object.keys(TYPES).map(function(k){return[k,TYPES[k]]}),F.type,"setF.bind(null,'type')")+sel("s","All Statuses",ST.map(function(s){return[s[0],s[1]]}),F.status,"setF.bind(null,'status')")+sel("v","All Versions",VERSIONS,F.version,"setF.bind(null,'version')")+sel("sh","All Shifts",SHIFTS,F.shift,"setF.bind(null,'shift')")+sel("c","All Classes",CLASSES,F.cls,"setF.bind(null,'cls')")+'<input class="full" placeholder="Search name, phone, ID, serial..." value="'+esc(F.q)+'" oninput="setF(\'q\',this.value)" style="grid-column:1/-1">'
+  +'<label class="full" style="display:flex;gap:8px;align-items:center;font-size:13.5px"><input type="checkbox" style="width:auto" '+(F.marks?"checked":"")+' onchange="setF(\'marks\',this.checked)"> Marks-wise list (sorted by marks)</label></div>';
+ if(S.role==="super_admin")h+='<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px"><button class="btn bg sm" onclick="toast(\'Excel export is in the full app\')">Export Excel</button><button class="btn bg sm" onclick="toast(\'Template download is in the full app\')">Download Import Template</button><button class="btn bg sm" onclick="toast(\'Batch import/update is in the full app\')">Batch Import / Update</button></div>';
+ return h+'<div class="card tw" id="list"></div><div class="pager" id="pager"></div>'}
+function setF(k,v){var key=k==="cls"?"cls":k;S.F[key]=v;S.F.page=1;renderList()}
+function visible(){return APPS.filter(function(a){return S.role!=="entry"||a.enteredBy===S.user})}
+function vr(a){var i=VERSIONS.indexOf(a.version);return i<0?9:i}
+function cr(a){var i=CLASSES.indexOf(a["class"]);return i<0?99:i}
+function bk(a){return a.reference?0:a.remarks?1:2}
+var HEAD=["approved","short_listed","applied"];
+function pickStat(s){S.F.status=S.F.status===s?"":s;S.F.page=1;renderList()}
+function renderList(){var F=S.F,base=visible();
+ function m(a,skipStatus){var t=(F.q||"").toLowerCase();
+  return(!F.type||a.type===F.type)&&(skipStatus||!F.status||a.status===F.status)&&(!F.version||a.version===F.version)&&(!F.shift||a.shift===F.shift)&&(!F.cls||a["class"]===F.cls)&&(!t||[a.name,a.appSl,a.reference,a.studentId,a.phone].join(" ").toLowerCase().indexOf(t)>-1)}
+ var counts={};ST.forEach(function(s){counts[s[0]]=0});base.filter(function(a){return m(a,true)}).forEach(function(a){counts[a.status]++});
+ var items=base.filter(function(a){return m(a)});
+ if(F.marks)items.sort(function(a,b){return(b.examMarks==null?-1:b.examMarks)-(a.examMarks==null?-1:a.examMarks)});else items.sort(function(a,b){return vr(a)-vr(b)||cr(a)-cr(b)||bk(a)-bk(b)||a.createdAt-b.createdAt||(a.appSl<b.appSl?-1:1)});
+ var tp=Math.max(1,Math.ceil(items.length/S.PAGE));if(F.page>tp)F.page=tp;
+ var pg=items.slice((F.page-1)*S.PAGE,F.page*S.PAGE);
+ $("cnt").textContent=items.length+" application(s)"+(S.role==="entry"?" - showing only entries you submitted.":".");
+ $("stats").className="stats three";$("stats").innerHTML=HEAD.map(function(k){return'<button type="button" class="stat click'+(F.status===k?" on":"")+'" onclick="pickStat(\''+k+'\')"><b>'+counts[k]+'</b><span>'+STM[k][1]+'</span></button>'}).join("");
+ if(!pg.length){$("list").innerHTML='<div style="text-align:center;padding:40px;color:var(--soft)">No applications match these filters.</div>';$("pager").innerHTML="";return}
+ var h='<table><thead><tr><th>Serial</th><th>Ver</th><th>Shift</th><th>Type</th><th>Name / Subject</th><th>Class</th><th>Category</th><th>Reference</th>'+(F.marks?"<th>Marks</th>":"")+'<th>Status</th><th>Submitted</th><th></th></tr></thead><tbody>';
+ pg.forEach(function(a){h+='<tr onclick="openDetail('+a.id+')"><td class="mono">'+a.appSl+'</td><td>'+(a.version?'<span class="vc '+VAB[a.version]+'">'+VAB[a.version]+'</span>':"-")+'</td><td>'+(a.shift?SAB[a.shift]:"-")+'</td><td>'+TYPES[a.type]+'</td><td>'+esc(a.name||a.subject||"-")+'</td><td>'+(a["class"]||"-")+'</td><td>'+(a.category||"-")+'</td><td>'+esc(a.reference||"-")+'</td>'+(F.marks?'<td class="mono">'+(a.examMarks==null?"-":a.examMarks)+'</td>':"")+'<td>'+seal(a.status)+'</td><td class="muted">'+fmtD(a.createdAt)+'</td><td onclick="event.stopPropagation()"><button class="btn bg sm" onclick="copyLink('+a.id+')">Copy Link</button></td></tr>'});
+ $("list").innerHTML=h+'</tbody></table>';
+ $("pager").innerHTML=tp>1?'<button class="btn bg sm" '+(F.page<=1?"disabled":"")+' onclick="S.F.page--;renderList()">&larr; Prev</button><span class="muted">Page '+F.page+' of '+tp+'</span><button class="btn bg sm" '+(F.page>=tp?"disabled":"")+' onclick="S.F.page++;renderList()">Next &rarr;</button>':""}
+function findId(e){e.preventDefault();var v=$("fid").value.trim().toLowerCase();if(!v)return false;
+ var a=visible().filter(function(x){return x.appSl.toLowerCase()===v})[0];
+ if(a){$("fid").value="";openDetail(a.id)}else toast('No application found for "'+v+'"');return false}
+function copyLink(id){var a=byId(id),url=(location.origin&&location.origin!=="null"?location.origin:"https://your-site")+"/track?id="+encodeURIComponent(a.appSl);
+ function ok(){toast("Tracking link copied")}
+ function fb(){var t=document.createElement("textarea");t.value=url;document.body.appendChild(t);t.select();try{document.execCommand("copy");ok()}catch(e){toast(url)}document.body.removeChild(t)}
+ if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(url).then(ok,fb);else fb()}
+function byId(id){return APPS.filter(function(a){return a.id===id})[0]}
+
+/* ---------- detail modal ---------- */
+function openDetail(id){var a=byId(id);if(!a)return;var ed=canStatus(S.role);
+ var h='<div class="bd" onclick="closeM()"><div class="modal" onclick="event.stopPropagation()"><div style="display:flex;justify-content:space-between;gap:10px;align-items:flex-start"><div><span class="eyebrow">'+TYPES[a.type]+' &middot; Serial '+a.appSl+'</span><h2 style="font-size:19px">'+esc(a.name||a.subject||"-")+'</h2></div>'+seal(a.status)+'</div>';
+ h+='<div style="display:flex;gap:8px;margin:12px 0"><button class="btn bg sm" onclick="copyLink('+a.id+')">Copy tracking link</button><button class="btn bg sm" onclick="toast(\'PDF receipt is in the full app\')">Download PDF</button></div>';
+ var P=["name","reference","version","shift","class","category"];
+ h+='<div class="dg">'+P.map(function(k){return'<div><span class="muted">'+(k==="class"?"Class":FM[k].l)+': </span><b>'+esc(a[k]||"-")+'</b></div>'}).join("")+'<div><span class="muted">Exam Marks: </span><b>'+(a.examMarks==null?"Not entered":a.examMarks)+'</b></div></div>';
+ var sec=TFIELDS[a.type].filter(function(k){return P.indexOf(k)<0&&a[k]});
+ if(sec.length||a.phone)h+='<div class="dg" style="margin-top:-4px">'+sec.map(function(k){return'<div><span class="muted">'+FM[k].l+': </span><b>'+esc(a[k])+'</b></div>'}).join("")+(a.phone?'<div><span class="muted">Mobile: </span><b>'+esc(a.phone)+'</b></div>':"")+'</div>';
+ h+=seatBox(a);
+ if(ed){h+='<hr><h3 style="font-size:15px;margin-bottom:10px">Update Status</h3><div class="grid2" style="margin-bottom:10px"><div class="field"><label>New Status</label><select id="m_st">'+ST.map(function(s){return'<option value="'+s[0]+'"'+(s[0]===a.status?" selected":"")+'>'+s[1]+'</option>'}).join("")+'</select></div><div class="field"><label>Note (optional)</label><input id="m_note" placeholder="Reason / comment"></div></div><button class="btn ba" onclick="saveStatus('+a.id+')">Save Status</button>'}
+ h+='<hr><h3 style="font-size:15px;margin-bottom:12px">Status Timeline</h3><div class="tl">'+a.statusHistory.slice().reverse().map(function(x){return'<div class="ti">'+seal(x.status)+'<div class="tm">'+fmtDT(x.at)+(x.by?" &middot; by "+esc(x.by):"")+'</div>'+(x.note?'<div class="muted" style="font-size:13px">'+esc(x.note)+'</div>':"")+'</div>'}).join("")+'</div>';
+ h+='<hr><h3 style="font-size:15px;margin-bottom:10px">Documents</h3>'+docsHTML(a);
+ if(ed)h+='<hr><h3 style="font-size:15px;margin-bottom:10px">Update Exam Marks</h3><div style="display:flex;gap:10px;align-items:flex-end"><div class="field" style="max-width:150px"><label>Marks</label><input id="m_mk" type="number" min="0" value="'+(a.examMarks==null?"":a.examMarks)+'"></div><button class="btn ba" onclick="saveMarks('+a.id+')">Save Marks</button></div>';
+ h+='<div style="text-align:right;margin-top:18px"><button class="btn bg" onclick="closeM()">Close</button></div></div></div>';
+ $("modal").innerHTML=h}
+function closeM(){$("modal").innerHTML="";if(S.view==="admin")renderList()}
+function seatSt(n){var v=Number(n);function mix(A,B,t){var f=function(h){var x=parseInt(h.slice(1),16);return[x>>16&255,x>>8&255,x&255]},p=f(A),q=f(B);return"rgb("+p.map(function(c,i){return Math.round(c+(q[i]-c)*t)}).join(",")+")"}
+ if(n===""||n==null||isNaN(v)||v===0)return"background:#fff;color:#374151";
+ if(v<0)return"background:"+mix("#e6f4ea","#5dbb82",Math.min(Math.abs(v)/45,1))+";color:#0b3d20";
+ return"background:"+mix("#fde4e6","#f58a90",Math.min(v/25,1))+";color:#5c0b12"}
+function seatBox(a){if(!a.version||!a["class"])return"";
+ var h='<div class="seat"><div class="h">Seat / Section &mdash; '+VAB[a.version]+"-"+a["class"]+'</div><div class="row">';
+ SHIFTS.forEach(function(s){var r=SEATS[a.version+"|"+s+"|"+a["class"]],st=r?r.status:null;
+  h+='<div><div style="font-size:12.5px;font-weight:600;margin-bottom:4px">'+SAB[s]+'</div><div style="display:flex;gap:16px;justify-content:center;align-items:flex-end"><div><small>Section</small><b>'+(r?r.sec:"-")+'</b></div><div><small>Sup(+) Vac(-)</small><b class="pill" style="'+(r?seatSt(st):"")+'">'+(r?(st>0?"+"+st:st):"-")+'</b></div></div></div>'});
+ return h+'</div></div>'}
+function docsHTML(a){var h=a.documents.length?"":'<p class="muted" style="font-size:13px;margin-top:0">No documents uploaded yet.</p>';
+ a.documents.forEach(function(d,i){h+='<div class="doc"><div><b>'+esc(d.type)+'</b><span class="muted"> &middot; '+esc(d.name)+' &middot; '+Math.max(1,Math.round(d.size/1024))+' KB</span></div><button class="btn bg sm" onclick="rmDoc('+a.id+','+i+')">Remove</button></div>'});
+ return h+'<div class="grid2" style="margin-top:8px"><div class="field"><label>Document Type</label><select id="m_dt">'+DOCTYPES.map(function(t){return'<option>'+esc(t)+'</option>'}).join("")+'</select></div><div class="field"><label>Add File (image or PDF, any size)</label><input type="file" accept="application/pdf,image/*" onchange="addDoc('+a.id+',this)"></div></div><div class="muted" style="font-size:12px;margin-top:6px">Auto-shrunk to under 200 KB.</div>'}
+function addDoc(id,inp){var f=inp.files[0];if(!f)return;var t=$("m_dt").value;toast("Converting file...");
+ prep(f).then(function(r){var a=byId(id);r.forEach(function(x){a.documents.push({type:t,name:x.name,size:x.size})});openDetail(id);toast("Added ("+r[0].note+")")}).catch(function(e){toast(e.message)});inp.value=""}
+function rmDoc(id,i){byId(id).documents.splice(i,1);openDetail(id)}
+function saveStatus(id){var a=byId(id),s=$("m_st").value,n=$("m_note").value.trim();
+ if(s!==a.status||n){a.status=s;a.statusHistory.push({status:s,at:new Date(),by:S.user,note:n})}openDetail(id);toast("Status saved")}
+function saveMarks(id){var v=$("m_mk").value;byId(id).examMarks=v===""?null:Number(v);openDetail(id);toast("Marks saved")}
+
+/* ---------- seats page ---------- */
+function viewSeats(){var combos=[];VERSIONS.forEach(function(v){SHIFTS.forEach(function(s){combos.push([v,s])})});
+ var h='<span class="eyebrow">Registry Configuration</span><h1 class="title">Seat &amp; Section Capacity</h1><p class="sub">Per Version &times; Shift &times; Class: Section count and Sup(+) Vac(-). Negative = green (deeper as it grows), positive = red (deeper as it grows), zero = white.</p><div class="card seatgrid tw" style="padding:4px"><table><thead><tr><th class="sc">Class</th>'+combos.map(function(c){return'<th colspan="2">'+VAB[c[0]]+" "+SAB[c[1]]+'</th>'}).join("")+'</tr><tr><th class="sc"></th>'+combos.map(function(){return'<th>Section</th><th>Sup(+) Vac(-)</th>'}).join("")+'</tr></thead><tbody>';
+ CLASSES.forEach(function(c){h+='<tr style="cursor:default"><td class="mono sc"><b>'+c+'</b></td>'+combos.map(function(x){var k=x[0]+"|"+x[1]+"|"+c,r=SEATS[k];return'<td><input type="number" data-k="'+k+'" data-f="sec" value="'+r.sec+'"></td><td><input type="number" data-k="'+k+'" data-f="status" value="'+r.status+'" style="font-weight:600;'+seatSt(r.status)+'" oninput="this.style.cssText=\'font-weight:600;\'+seatSt(this.value)"></td>'}).join("")+'</tr>'});
+ return h+'</tbody></table></div><div style="margin-top:16px"><button class="btn ba" onclick="saveSeats()">Save All</button></div>'}
+function saveSeats(){var ins=document.querySelectorAll(".seatgrid input");for(var i=0;i<ins.length;i++){var e=ins[i];SEATS[e.getAttribute("data-k")][e.getAttribute("data-f")]=Number(e.value)||0}toast("Seat data saved")}
+
+render();
+</script>
+</body>
+</html>
