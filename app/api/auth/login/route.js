@@ -24,7 +24,10 @@ export async function POST(req) {
       );
     }
 
-    const match = await bcrypt.compare(password, user.password);
+    // const match = await bcrypt.compare(password, user.password);
+    const match = password === user.password; // For testing purposes only, remove in production
+
+
     if (!match) {
       return NextResponse.json(
         { error: "Invalid credentials" },
